@@ -1,13 +1,12 @@
-`use strict`;
+const ref = {
+  list: document.querySelector('#categories'),
+};
 
-const listItems = categories.children;
-console.log(`Number of categories: ${listItems.length}`);
-const categoryItemsRef = document.querySelectorAll('li.item');
+console.log(`Namber of categories: ${ref.list.children.length}`);
 
-categoryItemsRef.forEach(element => {
-  const categoriTitleRef = element.querySelector('h2').textContent;
-  const categoriElementsRef = element.querySelectorAll('ul li');
+[...ref.list.children].forEach(elem => {
+  const text = elem.querySelector('h2').textContent;
 
-  console.log(`Category: ${categoriTitleRef}`);
-  console.log(`Elements: ${categoriElementsRef.length}`);
+  console.log(`Category: ${text}`);
+  console.log(`Elements: ${elem.lastElementChild.children.length}`);
 });
