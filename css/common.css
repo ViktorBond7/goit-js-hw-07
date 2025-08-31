@@ -57,30 +57,19 @@ img {
   height: 30px;
 }
 
-/* .hero-list a.active {
-  color: red;
-  font-weight: bold;
-  text-decoration: underline;
-} */
-
-/* .hero-list a.active {
-  color: red;
-  font-weight: bold;
-  text-decoration: underline;
-} */
-
 .hero-list {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .hero-list a {
+  display: flex;
   position: relative;
   text-decoration: none;
   padding-bottom: 4px;
   color: #333;
 }
 
-.hero-list a:active::after {
+.hero-list a.active::after {
   content: ' ';
   position: absolute;
   left: 0;

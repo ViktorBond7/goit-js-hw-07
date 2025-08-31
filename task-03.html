@@ -15,13 +15,8 @@
       <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
     </div>
 
-    <script>
-      fetch('index.html')
-        .then(res => res.text())
-        .then(data => {
-          document.getElementById('header-placeholder').innerHTML = data;
-        });
-    </script>
+    <script src="js/fetch-header.js" type="module"></script>
+    <script src="js/rout.js" type="module"></script>
     <script src="js/task-03.js" type="module"></script>
   </body>
 </html>

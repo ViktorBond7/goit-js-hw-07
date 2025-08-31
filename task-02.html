@@ -11,13 +11,8 @@
     <header id="header-placeholder"></header>
 
     <ul class="gallery container"></ul>
-    <script>
-      fetch('index.html')
-        .then(res => res.text())
-        .then(data => {
-          document.getElementById('header-placeholder').innerHTML = data;
-        });
-    </script>
+    <script src="js/fetch-header.js" type="module"></script>
+    <script src="js/rout.js" type="module"></script>
     <script src="js/task-02.js" type="module"></script>
   </body>
 </html>
