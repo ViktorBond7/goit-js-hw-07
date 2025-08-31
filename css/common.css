@@ -13,12 +13,22 @@ body {
   line-height: 1.5;
 }
 
+#header-placeholder {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
 ol,
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
+/* a {
+  text-decoration: none;
+} */
 
 img {
   display: block;
@@ -45,4 +55,39 @@ img {
 .container-task-input input {
   width: 150px;
   height: 30px;
+}
+
+/* .hero-list a.active {
+  color: red;
+  font-weight: bold;
+  text-decoration: underline;
+} */
+
+/* .hero-list a.active {
+  color: red;
+  font-weight: bold;
+  text-decoration: underline;
+} */
+
+.hero-list {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hero-list a {
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 4px;
+  color: #333;
+}
+
+.hero-list a:active::after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+
+  background-color: #ff4500;
+  border-radius: 2px;
 }

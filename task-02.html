@@ -8,10 +8,16 @@
     <link rel="stylesheet" href="css/common.css" />
   </head>
   <body>
-    <p><a href="index.html">Go back</a></p>
+    <header id="header-placeholder"></header>
 
     <ul class="gallery container"></ul>
-
+    <script>
+      fetch('index.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        });
+    </script>
     <script src="js/task-02.js" type="module"></script>
   </body>
 </html>

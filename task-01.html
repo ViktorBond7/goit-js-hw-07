@@ -15,7 +15,8 @@
     </style>
   </head>
   <body>
-    <p><a href="index.html">Go back</a></p>
+    <header id="header-placeholder" class="container"></header>
+
     <ul id="categories" class="container">
       <li class="item">
         <h2>Animals</h2>
@@ -45,6 +46,14 @@
         </ul>
       </li>
     </ul>
+
+    <script>
+      fetch('index.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        });
+    </script>
 
     <script src="js/task-01.js" type="module"></script>
   </body>
