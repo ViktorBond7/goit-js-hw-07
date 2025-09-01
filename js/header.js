@@ -1,4 +1,4 @@
-fetch('/index.html')
+fetch('./index.html')
   .then(res => res.text())
   .then(data => {
     document.querySelector('header').innerHTML = data;
