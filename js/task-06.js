@@ -41,3 +41,5 @@ ref.btnCreateRef.addEventListener('click', event => {
 });
 
 ref.btnDestroyRef.addEventListener('click', destroyBoxes);
+
+ref.btnDestroyRef.style.backgroundColor = '#ff4e4e';
