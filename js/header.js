@@ -8,8 +8,7 @@ fetch('./index.html')
 
 function highlightCurrentLink() {
   const currentPage = window.location.pathname.split('/').pop();
-
-  document.querySelectorAll('.hero-list a').forEach(link => {
+  document.querySelectorAll('.hero-list li a').forEach(link => {
     if (link.getAttribute('href') === currentPage) {
       link.classList.add('active');
     }

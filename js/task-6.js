@@ -18,7 +18,7 @@ const destroyBoxes = () => {
 const createBoxes = amount => {
   destroyBoxes();
   let boxes = [];
-  for (let i = 0; i <= amount; i++) {
+  for (let i = 0; i <= amount - 1; i++) {
     const box = document.createElement('div');
     const size = `${30 + i * 10}px`;
     box.style.width = size;
