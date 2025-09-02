@@ -11,7 +11,7 @@ fetch('./header.html')
 function highlightCurrentLink() {
   const currentPage = window.location.pathname.split('/').pop();
   document.querySelectorAll('.link-task').forEach(link => {
-    if (link.getAttribute('href') === currentPage) {
+    if (link.getAttribute('href').split('/').pop() === currentPage) {
       link.classList.add('active');
     }
   });
