@@ -1,14 +1,16 @@
-fetch('./index.html')
+fetch('./header.html')
   .then(res => res.text())
   .then(data => {
-    document.querySelector('header').innerHTML = data;
+    document.querySelector('#header-placeholder').innerHTML = data;
 
-    highlightCurrentLink();
+    requestAnimationFrame(() => {
+      highlightCurrentLink();
+    });
   });
 
 function highlightCurrentLink() {
   const currentPage = window.location.pathname.split('/').pop();
-  document.querySelectorAll('.hero-list li a').forEach(link => {
+  document.querySelectorAll('.link-task').forEach(link => {
     if (link.getAttribute('href') === currentPage) {
       link.classList.add('active');
     }
