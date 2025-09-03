@@ -1,12 +1,15 @@
-fetch('./header.html')
-  .then(res => res.text())
-  .then(data => {
-    document.querySelector('#header-placeholder').innerHTML = data;
+const listHeader = `<ul class="container hero-list">
+  <li><a class="link-task" href="./task-1.html">Task 1</a></li>
+  <li><a class="link-task" href="./task-2.html">Task 2</a></li>
+  <li><a class="link-task" href="./task-3.html">Task 3</a></li>
+  <li><a class="link-task" href="./task-4.html">Task 4</a></li>
+  <li><a class="link-task" href="./task-5.html">Task 5</a></li>
+  <li><a class="link-task" href="./task-6.html">Task 6</a></li>
+</ul>`;
 
-    requestAnimationFrame(() => {
-      highlightCurrentLink();
-    });
-  });
+const containerHeader = document.querySelector('#header-placeholder');
+
+containerHeader.innerHTML = listHeader;
 
 function highlightCurrentLink() {
   const currentPage = window.location.pathname.split('/').pop();
@@ -16,3 +19,5 @@ function highlightCurrentLink() {
     }
   });
 }
+
+highlightCurrentLink();

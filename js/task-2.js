@@ -29,8 +29,8 @@ const ref = {
   list: document.querySelector('.gallery'),
 };
 
-const createCard = image => {
-  return `<li><img src="${image.url}" alt="${image.alt}" width="360" height="300"/></li>`;
+const createCard = ({ url, alt }) => {
+  return `<li><img src="${url}" alt="${alt}" width="360" height="300"/></li>`;
 };
 
 const cardsTemplate = images => images.map(image => createCard(image)).join('');
